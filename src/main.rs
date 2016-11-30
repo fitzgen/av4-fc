@@ -6,9 +6,15 @@
 extern crate byteorder;
 extern crate i2cdev;
 
+pub mod gyro;
+pub mod accel;
+pub mod mag;
+pub mod fusion;
+
 use byteorder::{BigEndian, ReadBytesExt};
 use i2cdev::core::*;
 use i2cdev::linux::*;
+
 use std::env;
 use std::error::Error;
 use std::io;
